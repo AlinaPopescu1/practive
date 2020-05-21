@@ -1,0 +1,24 @@
+public abstract class PageBase {
+public PageBase() {
+
+PageFactory.initElements(Driver.getDriver(), this);
+
+every time we create an object of any child class of PageBase,
+the default constructor in child class will call parent class constructor
+
+PageFactory. initElements() static method takes the driver
+instance of the given class and the class type,
+and returns a Page Object with its fields fully initialized
+Parameters:
+driver - The driver that will be used to look up the elements
+this   - returns the page object with @FindBy locators.
+
+this--> will refer/return a different page object, once the child class constructor
+calls the super class constructor, which eventually will run before child class constructor.
+
+an abstract class is still a super class, so its constructors run
+when someone makes an instance of a concrete subclass.
+
+Page Factory will initialize every WebElement variable with a reference to a
+corresponding element on the actual web page based on “locators” defined.
+This is done by using @FindBy annotations.*/
