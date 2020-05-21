@@ -18,6 +18,8 @@ public class Longpalindrome {
             remain /= 10;
 
         }
+
+
         return longNum == reverse;
 
     }
