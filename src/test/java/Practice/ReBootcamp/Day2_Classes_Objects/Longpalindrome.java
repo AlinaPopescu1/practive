@@ -18,7 +18,8 @@ public class Longpalindrome {
             remain /= 10;
 
         }
-
+//apapa
+        ////branch change
 
         return longNum == reverse;
 
